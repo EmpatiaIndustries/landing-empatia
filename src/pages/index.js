@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/index.css';
 
-function Index() {
+const Index = () => {
+
   const [date, setDate] = useState(null);
+
   useEffect(() => {
     async function getDate() {
       const res = await fetch('/api/date');
@@ -12,23 +14,13 @@ function Index() {
     }
     getDate();
   }, []);
+
   return (
     <main>
       <Helmet>
-        <title>Gatsby + Node.js (TypeScript) API</title>
+        <title>Empatía Industries</title>
       </Helmet>
-      <h1>HAHAHA</h1>
-      <h2>
-        Deployed with{' '}
-        <a
-          href="https://vercel.com/docs"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Vercel
-        </a>
-        !
-      </h2>
+
       <p>
         <a
           href="https://github.com/vercel/vercel/tree/master/examples/gatsby"
